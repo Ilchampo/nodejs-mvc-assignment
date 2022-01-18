@@ -1,0 +1,64 @@
+<div class='container'>
+
+	<!-- Header -->
+	<div class='header box'>
+		<img src='icons/bxs-hand.svg' alt='rentals-logo' />
+		<h1>Rentals</h1>
+	</div>
+
+	<!-- Content -->
+	<div class='content box'>
+		<div class='content-title'>
+			<img src='icons/bxs-book-content.svg' alt='history-logo' />
+			<h2>Rentals History</h2>
+		</div>
+		<div class='content-body'>
+			<table class='dyn-table'>
+				<tr>
+					<th>Full Name</th>
+					<th>Item</th>
+					<th>Rental Date</th>
+					<th>Expected Date</th>
+					<th>Return Date</th>
+					<th>Penalty</th>
+				</tr>
+				<!-- For each log found in db, create a tr with info -->
+				{{#each data}}
+					<tr>
+						<td>{{user}}</td>
+						<td>{{item}}</td>
+						<td>{{rentalDate}}</td>
+						<td>{{finalDate}}</td>
+						<td>{{returnDate}}</td>
+						{{#if penalty}}
+							<td class='red'>Yes</td>
+						{{else}}
+							<td class='green'>No</td>
+						{{/if}}
+					</tr>
+				{{/each}}
+			</table>
+		</div>
+	</div>
+
+	<!-- Footer -->
+	<div class='footer box'>
+		<div class='footer-title'>
+			<img src='icons/bxs-x-circle.svg' alt='penalty-value' />
+			<h2>Penalty Value</h2>
+		</div>
+
+		<div class='footer-content'>
+			<form
+				action='/rentals/calculate'
+				method='post'
+				enctype='application/x-www-form-urlencoded'
+			>
+				<input type='text' placeholder='Start Date' name='startDate' />
+				<input type='text' placeholder='End Date' name='endDate' />
+				<input type='submit' value='Calculate Fee' />
+			</form>
+		</div>
+	</div>
+
+</div>

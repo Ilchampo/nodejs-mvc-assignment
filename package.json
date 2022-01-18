@@ -1,0 +1,38 @@
+{
+  "name": "nodejs-mvc-assignment",
+  "version": "1.0.0",
+  "description": "web app to calculate fees on delayed rental items",
+  "main": "app.js",
+  "scripts": {
+    "dev": "nodemon src/app"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ilchampo/nodejs-mvc-assignment.git"
+  },
+  "keywords": [
+    "web",
+    "app",
+    "mvc",
+    "node",
+    "js",
+    "rental",
+    "fee",
+    "calculator"
+  ],
+  "author": "Pablo Beltran",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Ilchampo/nodejs-mvc-assignment/issues"
+  },
+  "homepage": "https://github.com/Ilchampo/nodejs-mvc-assignment#readme",
+  "dependencies": {
+    "dotenv": "^14.1.0",
+    "express": "^4.17.2",
+    "express-handlebars": "^6.0.2",
+    "mongoose": "^6.1.6"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  }
+}
